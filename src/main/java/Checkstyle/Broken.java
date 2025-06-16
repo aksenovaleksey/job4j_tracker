@@ -4,7 +4,7 @@ public class Broken {
 
     public static final String NEW_WALUE = "";
     private int sizeOfEmpty = 10;
-    public String surname;
+    private String surname;
     String name;
 
     Broken() {
