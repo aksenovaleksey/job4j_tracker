@@ -14,7 +14,7 @@ public class Broken {
     }
 
     public void media(Object obj) {
-        if (obj != null) {
+            if (obj != null) {
             System.out.println(obj);
         }
     }
