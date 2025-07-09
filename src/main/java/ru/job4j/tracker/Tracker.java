@@ -29,11 +29,26 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-        for (int i = 0; i < size; i++) {
-            if (items[i].getId() == id) {
-                return items[i];
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
+    }
+
+    public boolean replace(int id, Item item) {
+        int index = indexOf(id);
+        if (index == -1) {
+            return false;
+        }
+        item.setId(id); // Сохраняем старый id
+        items[index] = item; // Заменяем элемент
+        return true;
+    }
+
+    private int indexOf(int id) {
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                return index;
             }
         }
-        return null;
+        return -1;
     }
 }
