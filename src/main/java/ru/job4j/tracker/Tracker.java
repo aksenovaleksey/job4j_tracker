@@ -38,8 +38,8 @@ public class Tracker {
         if (index == -1) {
             return false;
         }
-        item.setId(id); // Сохраняем старый id
-        items[index] = item; // Заменяем элемент
+        item.setId(id);
+        items[index] = item;
         return true;
     }
 
@@ -51,4 +51,15 @@ public class Tracker {
         }
         return -1;
     }
-}
+
+    public void delete(int id) {
+        int index = indexOf(id);
+        if (index == -1) {
+            return;
+        }
+        int numberOfElementsToCopy = size - index - 1;
+        System.arraycopy(items, index + 1, items, index, numberOfElementsToCopy);
+        size--;
+        items[size] = null;
+    }
+    }
