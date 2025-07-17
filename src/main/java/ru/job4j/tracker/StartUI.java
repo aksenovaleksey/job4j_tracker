@@ -86,13 +86,6 @@ public class StartUI {
         }
     }
 
-    public static void createItem(Input input, String question, Tracker tracker) {
-        String name = input.askStr(question);
-        Item item = new Item(name);
-        tracker.add(item);
-        System.out.println("Добавленная заявка: " + item);
-    }
-
     private void showMenu() {
         String[] menu = {
                 "Добавить новую заявку", "Показать все заявки", "Изменить заявку",
