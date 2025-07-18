@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.awt.desktop.SystemEventListener;
+
 public class StartUI {
 
     public static void createItem(Input input, Tracker tracker) {
@@ -34,6 +36,7 @@ public class StartUI {
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
+        System.out.println("===Удаление завки===");
         int id = input.askInt("Введите id: ");
         Item item = tracker.findById(id);
         tracker.delete(id);
@@ -41,6 +44,7 @@ public class StartUI {
     }
 
     public static void replaceItem(Input input, Tracker tracker) {
+        System.out.println("===Редактирование завки===");
         int id = input.askInt("Введите id: ");
         String name = input.askStr("Введите имя: ");
         Item item = new Item(name);
@@ -52,7 +56,7 @@ public class StartUI {
     }
 
     public static void findAllItems(Tracker tracker) {
-        System.out.println("=== Вывод всех заявок ===");
+        System.out.println("===Вывод всех заявок===");
         Item[] items = tracker.findAll();
         if (items.length == 0) {
             System.out.println("Заявок нет.");
@@ -64,6 +68,7 @@ public class StartUI {
     }
 
     public static void findItemById(Input input, Tracker tracker) {
+        System.out.println("===Поиск заявок по id===");
         int id = input.askInt("Введите id: ");
         Item item = tracker.findById(id);
         if (item != null) {
@@ -74,6 +79,7 @@ public class StartUI {
     }
 
     public static void findItemByName(Input input, Tracker tracker) {
+        System.out.println("===Поиск заявок по имени===");
         String name = input.askStr("Введите имя: ");
         Item[] items = tracker.findByName(name);
         if (items.length > 0) {
