@@ -17,6 +17,6 @@ public class FindAllAction implements UserAction {
                 System.out.println(item);
             }
         }
-        return false;
+        return true;
     }
 }
