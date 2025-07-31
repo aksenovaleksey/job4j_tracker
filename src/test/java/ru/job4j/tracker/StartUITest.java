@@ -141,7 +141,6 @@ class StartUITest {
         );
     }
 
-
     @Test
     void whenDeleteItem() {
         Output output = new StubOutput();
