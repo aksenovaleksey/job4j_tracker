@@ -10,12 +10,13 @@ public class LambdaUsage {
         List<String> strings = Arrays.asList("eeeee", "a", "ccc", "dddd", "bb");
 
         Comparator<String> comparator = (left, right) -> {
-            System.out.println("Сравнение: '" + left + "' (длина: " + left.length() +
-                    ") с '" + right + "' (длина: " + right.length() + ")");
+            System.out.println("Сравнение: '" + left + "' (длина: " + left.length()
+                    + ") с '" + right + "' (длина: " + right.length() + ")");
             int result = Integer.compare(right.length(), left.length());
-            System.out.println("Результат: " + result + " (" +
-                    (result < 0 ? "left > right" :
-                            result > 0 ? "left < right" : "left = right") + ")");
+            System.out.println("Результат: " + result + " ("
+                    + (result < 0 ? "left > right"
+                    : result > 0 ? "left < right"
+                    : "left = right") + ")");
             System.out.println("---");
             return result;
         };
@@ -28,3 +29,4 @@ public class LambdaUsage {
         }
     }
 }
+
