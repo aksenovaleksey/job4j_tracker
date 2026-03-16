@@ -35,8 +35,15 @@ public class Address {
         return Objects.hash(city, street, home, apartment);
     }
 
-    public String getCity() { return city; }
-    public String getStreet() { return street; }
-    public int getHome() { return home; }
-    public int getApartment() { return apartment; }
+    public String getCity() {
+        return city; }
+
+    public String getStreet() {
+        return street; }
+
+    public int getHome() {
+        return home; }
+
+    public int getApartment() {
+        return apartment; }
 }
